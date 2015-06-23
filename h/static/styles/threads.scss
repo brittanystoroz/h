@@ -20,6 +20,27 @@ $threadexp-width: 1em;
   .thread:first-child {
     margin-top: 0.5em;
   }
+
+  .reply-count {
+    display: none;
+  }
+
+  .annotation {
+    &.collapsed {
+      .annotation-body, .tags, .annotation-actions {
+        display: none;
+      }
+
+      .reply-count {
+        display: inline;
+        position: relative;
+        top: -27px;
+        margin-left: .5em;
+        float: right;
+        left: 100%;
+      }
+    }
+  }
 }
 
 .thread {
@@ -78,6 +99,10 @@ $threadexp-width: 1em;
 
 .thread-message {
   margin-bottom: .5em;
+
+  &.collapsed {
+    margin-bottom: -1.5em;
+  }
 }
 
 .thread-deleted {
